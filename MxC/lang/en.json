@@ -1,0 +1,16 @@
+{
+  "m_title": "MxC MxChartDB Constants",
+  "m_descr": "<b>Optional helper module for module MxChartDB:</b><br><br>The purpose of this module is to store global constants into a database table named MxC for common access by all charts.<br><br>The constants values defined by this module can be obtained in the chart formulas with the function call<br><span  style='background-color:#F0F0F0;'>MxC( constant name [, timestamp] ).</span><br><br>It's possible to store:<ul><li>the constant name</li><li>the constant value</li><li>a date+time: validity of this definition (starting from)</li><li>a comment</li></ul><br>All constants can be defined several times with different values and different scopes of validity.",
+  "logging": "Info messages to log file",
+  "IndexDBName": "Name of the database",
+  "IndexDBName_helper": "The constants table is stored in this database.",
+  "MxC_table": "Constants table name",
+  "MxC_table_helper": "Is created automatically.",
+  "MxC": "Constants array",
+  "MxC_name": "Name",
+  "MxC_value": "Value",
+  "MxC_value_helper": "empty =&gt; null",
+  "valid_from": "Valid from",
+  "valid_from_helper": "empty =&gt; null",
+  "comment": "Comment"
+}

@@ -1,0 +1,129 @@
+{
+  "singleton": true,
+  "dependencies": [
+    "MxBaseModule"
+  ],
+  "category": "logging",
+  "author": "piet66",
+  "homepage": "https://github.com/piet66-peb?tab=repositories",
+  "icon": "icon.png",
+  "moduleName": "MxC",
+  "version": "1.0.0",
+  "maturity": "stable",
+  "repository": {
+    "type": "git",
+    "source": "https://github.com/piet66-peb/ZWay-MxC"
+  },
+  "defaults": {
+    "title": "__m_title__",
+    "description": "__m_descr__",
+    "logging": false,
+    "IndexDBName": "MxChartDB",
+    "MxC_table": "MxC"
+  },
+  "schema": {
+    "type": "object",
+    "properties": {
+      "logging": {
+        "type": "boolean"
+      },
+      "IndexDBName": {
+        "type": "string",
+        "readonly": true
+      },
+      "MxC_table": {
+        "type": "string",
+        "readonly": true
+      },
+      "MxC": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "MxC_name": {
+              "required": true,
+              "type": "string"
+            },
+            "MxC_value": {
+              "required": false,
+              "type": "string"
+            },
+            "MxC_type": {
+              "required": true,
+              "type": "select",
+              "default": "number",
+              "enum": [
+                "number",
+                "string"
+              ]
+            },
+            "valid_from": {
+              "required": false,
+              "type": "string",
+              "format": "datetime"
+            },
+            "comment": {
+              "required": false,
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "options": {
+    "fields": {
+      "logging": {
+        "type": "checkbox",
+        "rightLabel": "__logging__"
+      },
+      "IndexDBName": {
+        "label": "__IndexDBName__",
+        "helper": "__IndexDBName_helper__"
+      },
+      "MxC_table": {
+        "label": "__MxC_table__",
+        "helper": "__MxC_table_helper__"
+      },
+      "MxC": {
+        "label": "__MxC__",
+        "type": "table",
+        "fieldClass": "MxC_Array",
+        "actionbar": {
+          "actions": [
+            {
+              "action": "up",
+              "active": false
+            },
+            {
+              "action": "down",
+              "active": false
+            }
+          ]
+        },
+        "items": {
+          "fieldClass": "MxC_Fields",
+          "fields": {
+            "MxC_name": {
+              "label": "__MxC_name__"
+            },
+            "MxC_value": {
+              "label": "__MxC_value__",
+              "helper": "__MxC_value_helper__"
+            },
+            "MxC_type": {
+              "type": "select"
+            },
+            "valid_from": {
+              "label": "__valid_from__",
+              "helper": "__valid_from_helper__"
+            },
+            "comment": {
+              "label": "__comment__"
+            }
+          }
+        }
+      }
+    }
+  }
+}
