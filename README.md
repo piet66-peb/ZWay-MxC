@@ -1,7 +1,7 @@
 
 [![](MxC/htdocs/icon.png)](https://github.com/piet66-peb?tab=repositories)
 
-# MxC Helper module for module MxChartDB
+# MxC Optional helper module for module MxChartDB
 
 Purpose of this module: define global constants for all charts and store them into a database table for common access.
 
