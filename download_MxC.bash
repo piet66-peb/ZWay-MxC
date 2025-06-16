@@ -9,14 +9,14 @@
 #h Usage:        <path>/download_MxC.bash
 #h               or with wget:
 #h               url=https://github.com/piet66-peb/ZWay-MxC/raw/refs/heads/main/download_MxC.bash
-#h               cd /tmp; wget -q -O - $url | sudo bash
+#h               cd /tmp; wget -q -O - $url | bash
 #h Result:       
 #h Examples:     
 #h Outline:      
 #h Resources:    
 #h Platforms:    Linux
 #h Authors:      peb piet66
-#h Version:      V1.1.0 2025-05-31/peb
+#h Version:      V1.1.0 2025-06-16/peb
 #v History:      V1.1.0 2025-02-20/peb first version
 #h Copyright:    (C) piet66 2025
 #h
@@ -26,7 +26,7 @@
 #-----------
 MODULE='download_MxC.bash'
 VERSION='V1.1.0'
-WRITTEN='2025-05-31/peb'
+WRITTEN='2025-06-16/peb'
 
 #b Variables
 #-----------
@@ -47,15 +47,15 @@ echo cd $tmp...
 pushd $tmp >/dev/null
 
 echo downloading $gitzip...
-[ -e "$gitzip" ] && sudo rm $gitzip
+[ -e "$gitzip" ] && rm $gitzip
 wget -nv -O $gitzip $url
 
 echo extracting $gitzip...
-[ -e "$module" ] && sudo rm -R $module
-sudo unzip -q -o $gitzip
+[ -e "$module" ] && rm -R $module
+unzip -q -o $gitzip
 
 echo copying $pack to $tardir...
-sudo cp -dpR $module $tardir
+cp -dpR $module $tardir
 
 echo done.
 popd >/dev/null

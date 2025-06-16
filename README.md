@@ -28,7 +28,7 @@ Z-Way.
 or download it with wget and do a restart of z_way_server:
 ```sh
 url=https://github.com/piet66-peb/ZWay-MxC/raw/refs/heads/main/download_MxC.bash
-cd /tmp; wget -q -O - $url | sudo bash
+cd /tmp; wget -q -O - $url | bash
 
 ```
 
